@@ -1,0 +1,126 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+/* -------Start Of Website Color Branding-------- */
+
+$primary: #456ead;
+$gray: #434343;
+$secondary: #00bbb0;
+$orange: #fe6500;
+$lightGray: #707479;
+$BorderGray: #bcbcbc;
+$blue: #000f6c;
+$white: #ffffff;
+$black: #000000;
+$paragraph-color: #2a2d31;
+$input-color: #919191;
+$danger: #F3665D;
+$success: #83CB4B;
+$info: #F3B75D;
+$green: #83CB4B;
+$number-color: #a9abad;
+$quote-bg-color: #f8f8f8;
+
+/* -------End Of Website Color Branding-------- */
+
+/* -------begin customization-------- */
+$body-bg: $white;
+$body-color: $secondary;
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'lightGray': $lightGray,
+    'white': $white,
+    'black': $black,
+    'blue': $blue,
+    'orange': $orange,
+    'success': $success,
+    'green': $success,
+  ),
+  $theme-colors
+);
+
+$headings-color: $secondary;
+
+$slick-font-path: '/assets/fonts/';
+$slick-loader-path: '/assets/images/';
+
+$h1-font-size: 4.5em; // 72px
+$h2-font-size: 2.875em; // 46px
+$h3-font-size: em(34);
+$h4-font-size: em(28);
+$h5-font-size: em(24);
+$h6-font-size: em(20);
+$lead-font-size: em(26);
+$headings-margin-bottom: 0px;
+
+$btn-border-radius: em(50);
+$input-border-radius: 10px;
+$input-border-color: #707070;
+$input-font-size: em(24);
+$input-border-width: 1px;
+$input-padding-y: 0;
+$input-padding-x: 0;
+$input-height: em(63);
+$form-group-margin-bottom: em(67);
+
+$input-placeholder-color: rgba(#0d0d0d, 0.8);
+$input-plaintext-color: rgba($white, 0.7);
+$link-hover-color: $secondary;
+
+$btn-padding-y: 0px;
+$btn-padding-x: 0px;
+$btn-border-width: 2px;
+
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+$custom-checkbox-indicator-icon-checked: none;
+$custom-checkbox-indicator-icon-indeterminate: none;
+$custom-radio-indicator-icon-checked: none;
+$carousel-control-next-icon-bg: none;
+$carousel-control-prev-icon-bg: none;
+$form-feedback-icon-valid: none;
+$custom-select-indicator: none;
+$form-feedback-icon-invalid: none;
+
+$card-bg: transparent;
+$card-border-color: #dddddd;
+$card-border-radius: 0px;
+$card-spacer-x: 40px;
+$card-border-width: 0px;
+
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-bg: transparent;
+$breadcrumb-font-size: em(18);
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-active-color: $primary;
+$breadcrumb-border-radius: 0;
+$breadcrumb-item-padding: em(30);
+$breadcrumb-divider-color: $lightGray;
+$breadcrumb-divider: '';
+
+$modal-backdrop-bg: $black;
+$modal-content-bg: $black;
+$modal-content-border-width: 0px;
+$modal-content-border-color: transparent;
+$modal-content-border-radius: 0px;
+$modal-content-box-shadow-xs: none;
+$modal-backdrop-opacity: 0.8;
+
+//$color-red-error: $danger !default;
+//$color-green-success: $success;
+//$color-gray-arrow: $gray !default;
+
+$zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
+
+//** Placeholder text color
+$input-color-placeholder: $input-placeholder-color !default;
+$input-alt-color-placeholder: rgba($input-color-placeholder, 0.5) !default;
+
+/* -------end customization-------- */

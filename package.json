@@ -1,0 +1,44 @@
+{
+  "name": "HTML-Boilerplate",
+  "version": "1.0.0",
+  "description": "HTML Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "gulp build && webpack-dev-server --open",
+    "start": "gulp build && npm-run-all --parallel dev-gulp dev-server",
+    "build": "gulp build",
+    "dev-gulp": "gulp watch",
+    "dev-server": "webpack-dev-server --live-reload --open --hot",
+    "prettier": "prettier --write \"src/**/*.{html,css,scss}\" \"src/assets/js/script.{ts,tsx,js,jsx}\""
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "author": "AmericanEagle.com",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "html-webpack-plugin": "^5.5.0",
+    "imagemin-pngquant": "^9.0.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "sass": "^1.54.5",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.2"
+  }
+}
