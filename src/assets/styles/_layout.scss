@@ -22,7 +22,6 @@ body {
   text-align: left;
   margin: em(0);
   padding: em(0);
-  font-family: 'Calibri', sans-serif;
   font-weight: 400;
   box-sizing: border-box;
   color: $gray;
@@ -43,7 +42,7 @@ button {
 
 .container {
   padding: 0 em(12);
-  max-width: 87%;
+  max-width: 89.25%;
 
   .row {
     margin: 0 em(-12);
@@ -136,27 +135,12 @@ button {
 
 .btn {
   position: relative;
-  font-size: em(16);
-  box-shadow: none;
-  font-weight: normal;
-  white-space: normal;
-  padding: em(12) em(32);
-  border-radius: em(50);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
 
   .btn-icon {
+    font-size: em(20);
     &.btn-icon-before {
       padding-left: 0;
-      padding-right: em(10);
-    }
-  }
-
-  &.btn-center {
-    .btn-icon {
-      padding-left: em(10);
+      padding-right: em(4);
     }
   }
 
@@ -164,192 +148,6 @@ button {
   &:focus {
     outline: none;
     box-shadow: none;
-  }
-}
-
-.btn-sm {
-  font-size: em(14);
-  padding: em(10) em(24);
-}
-
-.btn-white {
-  color: $gray;
-  background: $white;
-  border: 1px solid rgba($primary, 0.16);
-  @include transitions();
-
-  .btn-icon {
-    padding-left: em(10);
-    padding-right: 0;
-    @include transitions(0.5s, transform);
-
-    &.btn-icon-before {
-      padding-left: 0;
-      padding-right: em(10);
-    }
-  }
-
-  &:hover {
-    color: $white;
-    background-color: $primary;
-
-    .btn-icon:not(.btn-icon-before) {
-      transform: translateX(em(12));
-    }
-  }
-
-  &:focus,
-  &:hover {
-    text-decoration: none;
-    outline: none;
-    box-shadow: none;
-  }
-}
-
-.btn-transparent {
-  color: $gray;
-  background: transparent;
-  border: 1px solid rgba($primary, 0.16);
-  @include transitions();
-
-  .btn-icon {
-    padding-left: em(10);
-    padding-right: 0;
-    @include transitions(0.5s, transform);
-
-    &.btn-icon-before {
-      padding-right: em(10);
-    }
-  }
-
-  &:hover {
-    color: $white;
-    background-color: $primary;
-
-    .btn-icon:not(.btn-icon-before) {
-      transform: translateX(em(12));
-    }
-  }
-}
-
-.btn-link {
-  color: $gray;
-  border: 0;
-  @include transitions();
-
-  .btn-icon {
-    padding-left: em(10);
-    padding-right: 0;
-    @include transitions(0.5s, transform);
-  }
-
-  &:focus,
-  &:hover {
-    text-decoration: none;
-    outline: none;
-    box-shadow: none;
-
-    .btn-icon:not(.btn-icon-before) {
-      transform: translateX(em(12));
-    }
-  }
-}
-
-.btn-link-primary {
-  color: $primary;
-  border: 0;
-  @include transitions();
-
-  .btn-icon {
-    padding-left: em(10);
-    @include transitions(0.5s, transform);
-  }
-
-  &:focus,
-  &:hover {
-    text-decoration: none;
-    outline: none;
-    box-shadow: none;
-
-    .btn-icon:not(.btn-icon-before) {
-      transform: translateX(em(12));
-    }
-  }
-}
-
-.btn-underline {
-  color: $gray;
-  border: 0;
-  padding: 0;
-  @include transitions();
-
-  .btn-icon {
-    padding-left: em(10);
-    padding-right: 0;
-    @include transitions(0.5s, transform);
-  }
-
-  &:after {
-    content: '';
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    background: $gray;
-  }
-
-  &:focus,
-  &:hover {
-    text-decoration: none;
-    outline: none;
-    box-shadow: none;
-
-    .btn-icon:not(.btn-icon-before) {
-      transform: translateX(em(12));
-    }
-  }
-}
-
-.btn-primary {
-  position: relative;
-  color: $white;
-  border: 1px solid $primary;
-  background-color: $primary;
-  @include transitions();
-  .btn-icon {
-    padding-left: em(10);
-    @include transitions(0.5s, transform);
-
-    &.btn-icon-before {
-      padding-right: em(10);
-    }
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: $primary;
-    color: $primary;
-    background-color: $white;
-    box-shadow: none;
-    outline: none;
-    .btn-icon:not(.btn-icon-before) {
-      transform: translateX(em(12));
-    }
-  }
-}
-
-.btn-outline-primary {
-  color: $primary;
-  border: 1px solid $primary;
-  background-color: transparent;
-  &:hover,
-  &:focus,
-  &:active {
-    color: $white;
-    background-color: $primary;
-    box-shadow: none;
-    outline: none;
   }
 }
 
@@ -409,6 +207,11 @@ button {
 
 .mh-100vh {
   min-height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 // Laptops large devices (desktops, 2400px and up)
@@ -499,7 +302,20 @@ button {
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 100%;
+    padding: 0 em(15);
+
+    .row {
+      margin: 0 em(-15);
+
+      [class^='col-'] {
+        padding: 0 em(15);
+      }
+    }
+  }
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {

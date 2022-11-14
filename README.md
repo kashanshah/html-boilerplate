@@ -2,7 +2,7 @@
 This is a boilerplate for HTML Project.
 
 ## Getting Started
-Setup the project on your local with these step:
+Set up the project on your local with these step:
 
 ### 1. Clone the repo on your PC
 
@@ -42,7 +42,7 @@ To execute the tests, run: ```npm run test```.
 > Note: Currently there are no test cases added.
 
 ## Contribute
-Create a new branch from `main`. Commit your code in that branch. Create a pull request from your branch to the `main`. Add relevent reviewers and publish that pull request.
+Create a new branch from `development`. Commit your code in that branch. Create a pull request from your branch to the `main`. Add relevent reviewers and publish that pull request.
 
 ### Packages
 - [Gulp 4](https://gulpjs.com/)

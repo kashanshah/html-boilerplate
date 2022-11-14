@@ -44,10 +44,15 @@ function scripts(cb) {
   // body omitted
   cb();
 
-  // src(['./node_modules/select2/dist/js/select2.full.min.js'])
-  //   .pipe(uglify())
-  //   .pipe(concat('app.min.js'))
-  //   .pipe(dest('dist/assets/js'));
+  src([
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+    './node_modules/jquery-inview/jquery.inview.js',
+    './node_modules/gsap/dist/all.js'
+  ])
+    .pipe(uglify())
+    .pipe(concat('app.min.js'))
+    .pipe(dest('dist/assets/js'));
 
   return (
     src(['./src/**/*.js'])

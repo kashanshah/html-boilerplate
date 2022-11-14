@@ -5,15 +5,16 @@
 
 /* -------Start Of Website Color Branding-------- */
 
-$primary: #456ead;
-$gray: #434343;
+$primary: #3D8A97; // done
+$black: #000000; // done
+$dark: $black; // done
+$gray: #666666; // done
 $secondary: #00bbb0;
 $orange: #fe6500;
 $lightGray: #707479;
 $BorderGray: #bcbcbc;
 $blue: #000f6c;
 $white: #ffffff;
-$black: #000000;
 $paragraph-color: #2a2d31;
 $input-color: #919191;
 $danger: #F3665D;
@@ -26,8 +27,8 @@ $quote-bg-color: #f8f8f8;
 /* -------End Of Website Color Branding-------- */
 
 /* -------begin customization-------- */
-$body-bg: $white;
-$body-color: $secondary;
+$body-bg: $white; // done
+$body-color: $black; // done
 $theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
@@ -59,7 +60,6 @@ $h6-font-size: em(20);
 $lead-font-size: em(26);
 $headings-margin-bottom: 0px;
 
-$btn-border-radius: em(50);
 $input-border-radius: 10px;
 $input-border-color: #707070;
 $input-font-size: em(24);
@@ -73,12 +73,20 @@ $input-placeholder-color: rgba(#0d0d0d, 0.8);
 $input-plaintext-color: rgba($white, 0.7);
 $link-hover-color: $secondary;
 
-$btn-padding-y: 0px;
-$btn-padding-x: 0px;
-$btn-border-width: 2px;
+$btn-font-size: 0.875em; // 14px done
+$btn-font-weight: 500; // done
+$btn-border-radius: 0px; // done
+$btn-padding-x: 1.71428571em; // 24px done
+$btn-padding-y: 0.964285714em; // 13.5 done
+//$btn-border-width: 2px;
 
-$navbar-dark-toggler-icon-bg: none;
-$navbar-light-toggler-icon-bg: none;
+$navbar-brand-padding-y: 16px; // done
+$navbar-padding-x: 0; // done
+$navbar-padding-y: 0; // done
+$navbar-nav-link-padding-x: 1.71428571em; // done
+$navbar-dark-active-color: $white; // done
+$navbar-dark-color: #D8E8EA; // done
+$navbar-brand-font-size: 16px; // done
 $custom-checkbox-indicator-icon-checked: none;
 $custom-checkbox-indicator-icon-indeterminate: none;
 $custom-radio-indicator-icon-checked: none;

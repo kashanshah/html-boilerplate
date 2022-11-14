@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ork71s');
+  src:  url('../fonts/icomoon.eot?ork71s#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.woff2?ork71s') format('woff2'),
+  url('../fonts/icomoon.ttf?ork71s') format('truetype'),
+  url('../fonts/icomoon.woff?ork71s') format('woff'),
+  url('../fonts/icomoon.svg?ork71s#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-caret-left:before {
+  content: "\e90b";
+}
+.icon-caret-right:before {
+  content: "\e90c";
+}
+.icon-caret-down:before {
+  content: "\e90d";
+}
+.icon-caret-up:before {
+  content: "\e90e";
+}
+.icon-chat:before {
+  content: "\e900";
+}
+.icon-phone-plus:before {
+  content: "\e901";
+}
+.icon-location-marker:before {
+  content: "\e902";
+}
+.icon-plus-circle:before {
+  content: "\e903";
+}
+.icon-minus-circle:before {
+  content: "\e904";
+}
+.icon-arrow-right:before {
+  content: "\e905";
+}
+.icon-user:before {
+  content: "\e906";
+}
+.icon-font-size:before {
+  content: "\e907";
+}
+.icon-color-mode:before {
+  content: "\e908";
+}
+.icon-search:before {
+  content: "\e909";
+}
+.icon-volume:before {
+  content: "\e90a";
+}

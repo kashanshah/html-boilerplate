@@ -5,6 +5,12 @@
   transition: $property $speed $timing;
 }
 
+@mixin rotate($deg: 0deg) {
+  -webkit-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
 @mixin borderRadius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
