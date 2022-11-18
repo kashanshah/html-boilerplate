@@ -3,7 +3,7 @@ import gulp from 'gulp';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import fileinclude from 'gulp-file-include';
-import { deleteSync } from 'del';
+import {deleteSync} from 'del';
 import gulpImagemin from 'gulp-imagemin';
 import imageminPngquant from 'imagemin-pngquant';
 import mapSources from 'gulp-sourcemaps';
@@ -12,7 +12,7 @@ import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
 
 const sass = gulpSass(dartSass);
-const { src, dest, series, parallel, watch, task } = gulp;
+const {src, dest, series, parallel, watch, task} = gulp;
 
 function clean(cb) {
   // body omitted
@@ -23,18 +23,13 @@ function clean(cb) {
 function styles(cb) {
   // body omitted
   cb();
-  return src([
-    'src/assets/styles/style.{scss,sass}'
-  ])
+  return src(['src/assets/styles/style.{scss,sass}'])
     .pipe(mapSources.init())
-    .pipe(
-      sass({
-        errLogToConsole: true,
-        // outputStyle: 'compressed',
-        // outputStyle: 'nested',
-      }).on('error', sass.logError)
-    )
-    .pipe(cleanCSS({ compatibility: 'ie8' }))
+    .pipe(sass({
+      errLogToConsole: true, // outputStyle: 'compressed',
+      // outputStyle: 'nested',
+    }).on('error', sass.logError))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(concat('style.css'))
     .pipe(mapSources.write('./'))
     .pipe(dest('dist/assets/css/'));
@@ -44,35 +39,24 @@ function scripts(cb) {
   // body omitted
   cb();
 
-  src([
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-    './node_modules/jquery-inview/jquery.inview.js',
-    './node_modules/gsap/dist/all.js'
-  ])
+  src(['./node_modules/jquery/dist/jquery.min.js', './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', './node_modules/slick-carousel/slick/slick.min.js', './node_modules/jquery-inview/jquery.inview.js', './node_modules/gsap/dist/all.js', './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',])
     .pipe(uglify())
     .pipe(concat('app.min.js'))
     .pipe(dest('dist/assets/js'));
 
-  return (
-    src(['./src/**/*.js'])
-      .pipe(uglify())
-      // .pipe(concat('app.min.js'))
-      .pipe(dest('dist/'))
-  );
+  return (src(['./src/**/*.js'])
+    .pipe(uglify())
+    // .pipe(concat('app.min.js'))
+    .pipe(dest('dist/')));
 }
 
 function imgMinify(cb) {
   // body omitted
   cb();
-  return src('src/**/*.{png,svg,jpg,jpeg,webp}')
-    .pipe(
-      gulpImagemin({
-        progressive: true,
-        svgoPlugins: [{ removeViewBox: false }],
-        use: [imageminPngquant({ quality: '50-100', speed: 5 })],
-      })
-    )
+  return src('src/**/*.{png,svg,jpg,jpeg,webp,gif}')
+    .pipe(gulpImagemin({
+      progressive: true, svgoPlugins: [{removeViewBox: false}], use: [imageminPngquant({quality: '50-100', speed: 5})],
+    }))
     .pipe(dest('dist/'));
 }
 
@@ -80,13 +64,10 @@ function publishHTML(cb) {
   // body omitted
   // cb();
   cb();
-  return src(['./src/**/*.html'])
-    .pipe(
-      fileinclude({
-        prefix: '@@',
-        basepath: '@file',
-      })
-    )
+  return src(['./src/**/*.html', './src/**/*.txt',])
+    .pipe(fileinclude({
+      prefix: '@@', basepath: '@file',
+    }))
     .pipe(dest('dist/'));
 }
 
