@@ -42,3 +42,10 @@
   }
   text-shadow: $value;
 }
+
+
+@mixin grayscale($value) {
+  filter: grayscale($value);
+  -webkit-filter: grayscale($value);
+  -moz-filter: grayscale($value);
+}
