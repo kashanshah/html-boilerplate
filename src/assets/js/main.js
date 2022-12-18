@@ -41,6 +41,7 @@ function mobileMenu() {
   }
 }
 
+
 function fancyBoxInit() {
   $('[data-fancybox]').fancybox({
     loop: false,
