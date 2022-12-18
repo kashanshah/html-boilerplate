@@ -39,9 +39,11 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "^4.6.2",
     "gsap": "^3.11.3",
     "jquery": "^3.6.1",
-    "jquery-inview": "^1.1.2"
+    "jquery-inview": "^1.1.2",
+    "slick-carousel": "^1.8.1"
   }
 }

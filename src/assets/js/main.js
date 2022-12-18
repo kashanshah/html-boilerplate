@@ -18,6 +18,8 @@ function animateElements() {
 $(document).ready(function () {
   mobileMenu();
   animateElements();
+  fancyBoxInit();
+  sameHeight();
 })
 
 
@@ -38,3 +40,53 @@ function mobileMenu() {
     })
   }
 }
+
+function fancyBoxInit() {
+  $('[data-fancybox]').fancybox({
+    loop: false,
+    buttons: [
+      "zoom",
+      "share",
+      "slideShow",
+      "fullScreen",
+      "download",
+      "thumbs",
+      "close"
+    ]
+  });
+}
+
+function sameHeight() {
+  if ($(window).width() < 576) {
+    $("[data-sameheight]").css("min-height", "");
+    return;
+  }
+  var sameHeightGroups = [];
+  $("[data-sameheight]").each(function () {
+    var group = $(this).data("sameheight");
+    if (!sameHeightGroups.includes(group)) {
+      sameHeightGroups.push(group);
+    }
+  });
+
+  $("[data-sameheight]").css("min-height", 0);
+
+  setTimeout(function () {
+    sameHeightGroups.forEach(function (group) {
+      var currentGroup = $("[data-sameheight='" + group + "']");
+      var mHeight = 0;
+      var counter = 0;
+      var totalCount = currentGroup.length;
+      currentGroup.each(function () {
+        counter++;
+        if (mHeight < $(this).outerHeight()) {
+          mHeight = $(this).outerHeight();
+        }
+        if (counter === totalCount) {
+          currentGroup.css("min-height", mHeight);
+        }
+      });
+    });
+  }, 1000);
+}
+
