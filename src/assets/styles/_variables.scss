@@ -5,10 +5,10 @@
 
 /* -------Start Of Website Color Branding-------- */
 
-$primary: #3D8A97; // done
-$black: #000000; // done
-$dark: $black; // done
-$gray: #666666; // done
+$primary: #3D8A97;
+$black: #000000;
+$dark: $black;
+$gray: #666666;
 $secondary: #00bbb0;
 $orange: #fe6500;
 $lightGray: #707479;
@@ -27,8 +27,8 @@ $quote-bg-color: #f8f8f8;
 /* -------End Of Website Color Branding-------- */
 
 /* -------begin customization-------- */
-$body-bg: $white; // done
-$body-color: $black; // done
+$body-bg: $white;
+$body-color: $black;
 $theme-colors: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $theme-colors: map-merge(
@@ -73,20 +73,20 @@ $input-placeholder-color: rgba(#0d0d0d, 0.8);
 $input-plaintext-color: rgba($white, 0.7);
 $link-hover-color: $secondary;
 
-$btn-font-size: 0.875em; // 14px done
-$btn-font-weight: 500; // done
-$btn-border-radius: 0px; // done
-$btn-padding-x: 1.71428571em; // 24px done
-$btn-padding-y: 0.964285714em; // 13.5 done
+$btn-font-size: 0.875em;
+$btn-font-weight: 500;
+$btn-border-radius: 0px;
+$btn-padding-x: 1.71428571em;
+$btn-padding-y: 0.964285714em;
 //$btn-border-width: 2px;
 
-$navbar-brand-padding-y: 16px; // done
-$navbar-padding-x: 0; // done
-$navbar-padding-y: 0; // done
-$navbar-nav-link-padding-x: 1.71428571em; // done
-$navbar-dark-active-color: $white; // done
-$navbar-dark-color: #D8E8EA; // done
-$navbar-brand-font-size: 16px; // done
+$navbar-brand-padding-y: 16px;
+$navbar-padding-x: 0;
+$navbar-padding-y: 0;
+$navbar-nav-link-padding-x: 1.71428571em;
+$navbar-dark-active-color: $white;
+$navbar-dark-color: #D8E8EA;
+$navbar-brand-font-size: 16px;
 $custom-checkbox-indicator-icon-checked: none;
 $custom-checkbox-indicator-icon-indeterminate: none;
 $custom-radio-indicator-icon-checked: none;
