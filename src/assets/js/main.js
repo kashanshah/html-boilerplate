@@ -89,4 +89,3 @@ function sameHeight() {
     });
   }, 1000);
 }
-
