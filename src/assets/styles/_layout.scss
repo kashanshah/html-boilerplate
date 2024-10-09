@@ -31,18 +31,9 @@ body {
 
 }
 
-a,
-button {
-  //outline: none !important;
-  &:focus,
-  &:hover {
-    text-decoration: none;
-  }
-}
-
 .container {
   padding: 0 em(12);
-  max-width: 89.25%;
+  max-width: 1600px;
 
   .row {
     margin: 0 em(-12);
@@ -180,38 +171,12 @@ img {
   max-height: 100%;
 }
 
-a:focus,
-a:hover,
-a {
-  text-decoration: none;
-  outline: none;
-  box-shadow: none;
-  @include transitions();
-}
-
-.disabled {
-  opacity: 0.5;
-  pointer-events: none;
-  cursor: not-allowed;
-}
-
-button:focus,
-button {
-  outline: none;
-  box-shadow: none;
-}
-
 .mw-fit-content {
   max-width: fit-content !important;
 }
 
 .mh-100vh {
   min-height: 100vh;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 // Laptops large devices (desktops, 2400px and up)
